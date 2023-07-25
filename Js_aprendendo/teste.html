@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou nao</title>
+</head>
+<body>
+    <h1>Vc é ou nao Estrangeiro</h1>
+    Qual é o seu Pais ? <input type="text" name="tpais" id="tpais">
+    <input type="button" value="Verifivar" onclick="resposta()">
+    <div id="res">Resposta</div>
+
+    <script>
+
+        function resposta() {
+            var pais= document.getElementById('tpais')
+            var res = document.getElementById('res')
+            var val = String(pais.value)
+            res.innerHTML = `Você é do(a) ${val} </br>`
+
+            if (val != 'Brasil') {
+                res.innerHTML += 'Vc é estrangeiro'
+            } else {
+                res.innerHTML += 'Vc é brasileiro'
+            }
+        }    
+    </script>
+</body>
+</html>
